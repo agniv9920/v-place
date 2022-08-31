@@ -69,14 +69,17 @@ Navbar CSS
   background-color: #04A;
   color: white;
   padding: 12px 14px;
-  margin: 10px 0;
   border: none;
-  width: 100%;
+  width: 10%;
   border-radius: 25px;
   cursor: pointer;
   font-size: 17px;
-  display: flex;
-  margin-right: 800px;
+  /*display: flex;*/
+  text-align: center;
+  float: left;
+  position: relative;
+  top: 700px;
+  left: 200px;
 }
 .btn:hover{
   background-color: #ddd;
