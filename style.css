@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
-html, body {
+html {
   height: 100%;
   width: 100%;
   font-family: "Poppins", serif;
@@ -72,7 +72,7 @@ Navbar CSS
   color: white;
   padding: 12px 14px;
   border: none;
-  width: 10%;
+  width: 9%;
   border-radius: 25px;
   cursor: pointer;
   font-size: 17px;
@@ -80,8 +80,9 @@ Navbar CSS
   text-align: center;
   float: left;
   position: relative;
-  top: 700px;
-  left: 200px;
+  top: 3px;
+   left: 40px;
+   font-family: "Poppins", serif;
 } 
  .btn:hover{
   background-color: #ddd;
