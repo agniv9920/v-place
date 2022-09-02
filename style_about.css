@@ -11,7 +11,7 @@ html {
 Navbar CSS
 */
 .topnav {
-  background-color: white
+  background-color: white;
   overflow: hidden;
 }
 
@@ -143,6 +143,8 @@ body{
 
 .card__background{
   background-size: cover;
+  /*width: 300px;
+  height: 340px;*/
   background-position: center;
   border-radius: var(--spacing-l);
   bottom: 0;
