@@ -8,7 +8,7 @@ html {
 Navbar CSS
 */
 .topnav {
-  background-color: white
+  background-color: white;
   overflow: hidden;
 }
 
@@ -17,11 +17,11 @@ Navbar CSS
   float: left;
   color: black;
   text-align: center;
-  padding: 20px 20px;
+  padding: 12px 12px;
   text-decoration: none;
   font-size: 17px;
   border-radius: 25px;
-  
+  margin: 10px;
 }
 
 /* Change the color of links on hover */
@@ -65,8 +65,16 @@ Navbar CSS
   padding: 1px;
   text-align: center;
   top: 150%;
-  margin-left: 255px;
+  margin-left: 150px;
 }
+
+.center{
+  text-align: left;
+  font-family: Boiling;
+  margin-left: 80px;
+  font-size: 65px;
+}
+
 :root {
   --surface-color: #fff;
   --curve: 40;
