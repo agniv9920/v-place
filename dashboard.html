@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>User Dashboard</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico">
+
+  <link href="style1.css" rel="stylesheet" type="text/css" />
+  <link href="style_dash.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">-->
+</head>
+<body>
+<header>
+  <script>
+    function lout() {
+      window.location.assign("index.html");
+      alert("Logged Out Successfully");
+    }
+  </script>
+  <div class="header__title">Dashboard</div>
+  <a class="header__icon" href="#"><i class="fa fa-bars"></i></a>
+</header>
+<nav>
+  <a class="nav__item" href="#"><i class="fa fa-bell"></i></a>
+  <a class="nav__item" href="#"><i class="fa fa-envelope"></i></a>
+  <a class="nav__item nav__item--last-left" href="#"><i class="fa fa-gear"></i></a>
+  <a class="nav__item" href="#"><i class="fa fa-search"></i></a>
+  <a class="nav__item" href="#"><i class="fa fa-rocket"></i></a>
+</nav>
+<main>
+  <div class="content-title">
+    <h2>Overview</h2><i class="fa fa-angle-right"></i>
+    <div class="filter">
+      <a class="filter__item">today</a>
+      <a class="filter__item">month</a>
+      <a class="filter__item">year</a>
+    </div>
+    <button style="padding-bottom: 20px;" onclick="lout()">Log out</button>
+  </div>
+  <div class="pill-wrapper">
+    <div class="pill">
+      <i class="pill__icon fa fa-user"></i>
+      <div class="pill__detail">View Detail</div>
+      <div class="pill__content">
+        <div class="pill__date"></div>
+        <div class="pill__title">Companies Visited</div>
+        <div class="pill__value">0</div>        
+      </div>
+    </div>
+
+    <div class="pill">
+      <i class="pill__icon fa fa-user"></i>
+      <div class="pill__detail">View Detail</div>
+      <div class="pill__content">
+        <div class="pill__date"></div>
+        <div class="pill__title">Total Applications</div>
+        <div class="pill__value">0</div>        
+      </div>
+    </div>
+
+    <div class="pill">
+      <i class="pill__icon fa fa-user"></i>
+      <div class="pill__detail">View Detail</div>
+      <div class="pill__content">
+        <div class="pill__date"></div>
+        <div class="pill__title">Job/Internship Offer</div>
+        <div class="pill__value">0</div>        
+      </div>
+    </div>    
+  </div>
+  <div class="content-title">
+    <h2>Secondary</h2><i class="fa fa-angle-right"></i>
+  </div>
+  <!--<div class="chart">
+    <h3>total sale</h3>
+  </div>-->
+  <div class="activity-feed">
+    <h3>User Activity</h3>
+    <ul class="feed">
+      <li class="feed__item user">
+        <div class="user__avatar"></div>
+        <div class="user__name">User</div>
+        <div class="user__message">new comment</div>
+        <div class="user__timestamp">4 minutes ago</div>
+      </li>
+      <li class="feed__item user">
+        <div class="user__avatar"></div>
+        <div class="user__name">User</div>
+        <div class="user__message">new comment</div>
+        <div class="user__timestamp">4 minutes ago</div>
+      </li>
+      <li class="feed__item user">
+        <div class="user__avatar"></div>
+        <div class="user__name">User</div>
+        <div class="user__message">new comment</div>
+        <div class="user__timestamp">4 minutes ago</div>
+      </li>
+     <!-- <li class="feed__item user">
+        <div class="user__avatar"></div>
+        <div class="user__name">User</div>
+        <div class="user__message">new comment</div>
+        <div class="user__timestamp">4 minutes ago</div>
+      </li>
+      <li class="feed__item user">
+        <div class="user__avatar"></div>
+        <div class="user__name">User</div>
+        <div class="user__message">new comment</div>
+        <div class="user__timestamp">4 minutes ago</div>
+      </li>
+      <li class="feed__item user">
+        <div class="user__avatar"></div>
+        <div class="user__name">User</div>
+        <div class="user__message">new comment</div>
+        <div class="user__timestamp">4 minutes ago</div>
+      </li>
+      <li class="feed__item user">
+        <div class="user__avatar"></div>
+        <div class="user__name">User</div>
+        <div class="user__message">new comment</div>
+        <div class="user__timestamp">4 minutes ago</div>
+      </li>-->    
+    </ul>
+    <!--<div class="activity-feed__button">
+      View more
+    </div>-->
+  </div>
+  <div class="circle-chart">
+    <h3>Skills</h3>
+    <div class="circle-chart__content">
+      <div class="circle"></div>
+      <div class="legend">
+        <div class="legend__item">
+          <div class="legend__icon legend__icon--blue">   </div>
+          HTML, CSS, JS
+        </div>
+        <div class="legend__item">
+          <div class="legend__icon legend__icon--orange"></div>
+          C, CPP, JAVA
+        </div>       
+      </div>
+    </div>
+  </div>
+  <div class="circle-chart">
+    <h3>Job profiles</h3>
+    <div class="circle-chart__content">
+      <div class="circle"></div>
+      <div class="legend">
+        <div class="legend__item">
+          <div class="legend__icon legend__icon--blue">   </div>
+          Full-Stack Developer
+        </div>
+        <div class="legend__item">
+          <div class="legend__icon legend__icon--orange"></div>
+          Software Developer Engineer
+        </div>        
+        <div class="legend__item">
+          <div class="legend__icon legend__icon--red"></div>
+          DevOps Engineer
+        </div>        
+      </div>
+    </div>
+  </div>
+</main>
+
+<aside>
+  <a href="index.html">Home</a>
+  <a href="jobs.html">Jobs</a>
+  <a href="inter.html">Internships</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contacts</a>
+  <a href="dashboard.html">Dashboard</a>
+  
+</aside>

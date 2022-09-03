@@ -42,13 +42,18 @@
         <img src="images/VPlace1.png">
 
         <div class="right">
-          <a href="getstart.html">Get Started</a>
-          <a href="sign-in.html">Sign in</a>
+          <button onclick="lout()" class="btn">Log out</button>
         </div>
       </div>
     </div>
 
   </header>
+  <script>
+    function lout() {
+      window.location.assign("index.html");
+      alert("Logged Out Successfully");
+    }
+  </script>
   <h2 style="padding: 1em;"><strong>How it Works?</strong></h2>
 
   <p style="padding: 1em;">During the placement season, the university gives emails to apply for the placement drive of each and every company. Due to which the inbox gets dumped with so many emails including the regular curriculum updates. Hence, this is a hectic job for both the university and the students to maintain all these emails timely.</p>

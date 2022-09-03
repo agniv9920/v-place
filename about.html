@@ -20,19 +20,24 @@
       <a href="intern.html">Internships</a>
       <a class="active" href="about.html">About</a>
       <a href="contact.html">Contacts</a>
+      <a href="dashboard.html">Dashboard</a>
 
       <div class="logo">
         <img src="images/VPlace1.png">
 
         <div class="right">
-          <a href="getstart.html">Get Started</a>
-          <a href="sign-in.html">Sign in</a>
+          <button onclick="lout()" class="btn">Log out</button>
         </div>
       </div>
     </div>
 
   </header>
-
+<script>
+    function lout() {
+      window.location.assign("index.html");
+      alert("Logged Out Successfully");
+    }
+  </script>
 
 
 

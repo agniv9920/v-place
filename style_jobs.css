@@ -17,11 +17,11 @@ Navbar CSS
   float: left;
   color: black;
   text-align: center;
-  padding: 20px 20px;
+  padding: 12px 12px;
   text-decoration: none;
   font-size: 17px;
   border-radius: 25px;
-  
+  margin: 10px;
 }
 
 /* Change the color of links on hover */
@@ -67,6 +67,28 @@ Navbar CSS
   top: 150%;
   margin-left: 255px;
 }
+
+.btn{
+  background-color: #04A;
+  color: white;
+  padding: 12px 14px;
+  border: none;
+  width: 100%;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 17px;
+  display: flex;
+  text-align: center;
+  float: right;
+  position: relative;
+  top: 3px;
+  right: 40px;
+   font-family: "Poppins", serif;
+} 
+ .btn:hover{
+  background-color: #ddd;
+} 
+
 :root {
   --surface-color: #fff;
   --curve: 40;

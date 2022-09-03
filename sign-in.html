@@ -15,11 +15,11 @@
 
 
 <div class="topnav">
-  <a href="index.html">Home</a>
+  <!-- <a href="index.html">Home</a>
   <a href="jobs.html">Jobs</a>
   <a href="intern.html">Internships</a>
   <a href="about.html">About</a>
-  <a href="contact.html">Contacts</a>
+  <a href="contact.html">Contacts</a>-->
 
   <div class="logo">
     <img src="images/VPlace1.png">
@@ -66,68 +66,87 @@
           <label for="password">Password</label>
           <input type="password" name="password" id="password" placeholder="Enter your password">
 
-          <input type="submit" value="Log In">
+          <input type="submit" value="Log In" onclick="auth()">
 
         </form>
 
       </div>
+      <script>
+        function auth() {
+          var email = document.getElementById("email").value;
+          var password = document.getElementById("password").value;
+
+          if (email === "admin@gmail.com" && password === "admin123") {
+            window.location.assign("jobs.html");
+            alert("Successfully Logged In!");
+
+          } else {
+            alert("Invalid information");
+            return;
+          }
+
+        }
+
+      </script>
 
       <div class="form-footer">
         <div>
-          <span>Don't have an account?</span> <a href="">Sign Up</a>
+          <span>Don't have an account?</span> <a href="getstart.html">Sign Up</a>
         </div>
       </div>
 
     </div>
   </div>
-<footer>
-	<div class="container">
-		<div class="map">
-			<ul class="site_map">
-				<h4>SITE MAP</h4>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About Us</a></li>
-				<li><a href="contact.html">Contact Us</a></li>
-				<li><a href="jobs.html">Jobs</a></li>
-				<li><a href="intern.html">Internships</a></li>
-				<li><a href="privacy.html">Privacy Policy</a></li>
-				<li><a href="terms.html">Terms & Conditions</a></li>
-			</ul>
-		</div>
-		<div class="map">
-			<ul class="site_map">
-				<h4>Services</h4>
-				<li><a href="jobs.html">Jobs</a></li>
-				<li><a href="intern.html">Internships</a></li>
-			</ul>
-		</div>
-		<div class="map">
-			<ul class="site_map">
-				<h4>Company</h4>
-				<li><a href="about.html">About Us</a></li>
-				<li><a href="works.html">How it Works</a></li>
-				<li><a href="privacy.html">Privacy Policy</a></li>
-				<li><a href="terms.html">Terms & Conditions</a></li>
-			</ul>
-		</div>
-		<div class="media">
-			<ul class="social_media">
-				<h4>SOCIAL MEDIA</h4>
-				<li><a href=""><img src="images/insta logo2.png">Instagram</a></li>
-				<li><a href=""><img src="images/fblogo3.png">Facebook</a></li>
-				<li><a href=""><img src="images/twitter.png">Twitter</a></li>
-			</ul>
-		</div>
 
-	</div>
-	<div class="secondary">
-		<img src="images/VPlace1.png" alt="">Copyright &copy; 2022. All rights reserved.
-		<!-- <img src="img/payment.png" class="pay">		 -->
-	</div>
-	<div class="final">
-		<p>Place where you find all the Jobs and Interships provided by companies in your University </p>
-	</div>
-</footer>
+  <footer>
+    <div class="container">
+      <div class="map">
+        <ul class="site_map">
+          <h4>SITE MAP</h4>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sign-in.html">About Us</a></li>
+          <li><a href="sign-in.html">Contact Us</a></li>
+          <li><a href="sign-in.html">Jobs</a></li>
+          <li><a href="sign-in.html">Internships</a></li>
+          <li><a href="sign-in.html">Privacy Policy</a></li>
+          <li><a href="sign-in.html">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="map">
+        <ul class="site_map">
+          <h4>Services</h4>
+          <li><a href="sign-in.html">Jobs</a></li>
+          <li><a href="sign-in.html">Internships</a></li>
+        </ul>
+      </div>
+      <div class="map">
+        <ul class="site_map">
+          <h4>Company</h4>
+          <li><a href="sign-in.html">About Us</a></li>
+          <li><a href="sign-in.html">How it Works</a></li>
+          <li><a href="sign-in.html">Privacy Policy</a></li>
+          <li><a href="sign-in.html">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="media">
+        <ul class="social_media">
+          <h4>SOCIAL MEDIA</h4>
+          <li><a href=""><img src="images/insta logo2.png">Instagram</a></li>
+          <li><a href=""><img src="images/fblogo3.png">Facebook</a></li>
+          <li><a href=""><img src="images/twitter.png">Twitter</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="secondary">
+      <img src="images/VPlace1.png" alt="">Copyright &copy; 2022. All rights reserved.
+      <!-- <img src="img/payment.png" class="pay">		 -->
+    </div>
+    <div class="final">
+      <p>Place where you find all the Jobs and Interships provided by companies in your University </p>
+    </div>
+  </footer>
+
 </body>
 
 </html>
