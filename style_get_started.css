@@ -17,11 +17,11 @@ Navbar CSS
   float: left;
   color: black;
   text-align: center;
-  padding: 12px 12px;
+  padding: 20px 20px;
   text-decoration: none;
   font-size: 17px;
   border-radius: 25px;
-  margin: 10px;
+
 }
 
 /* Change the color of links on hover */
@@ -65,7 +65,7 @@ Navbar CSS
   padding: 1px;
   text-align: center;
   top: 150%;
-  margin-left: 150px;
+  margin-left: 239px;
 }
 * {box-sizing: border-box}
 

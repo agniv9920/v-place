@@ -6,7 +6,7 @@
 Navbar CSS
 */
 .topnav {
-  background-color: white;
+  background-color: white
   overflow: hidden;
 }
 
@@ -15,11 +15,11 @@ Navbar CSS
   float: left;
   color: black;
   text-align: center;
-  padding: 12px 12px;
+  padding: 20px 20px;
   text-decoration: none;
   font-size: 17px;
   border-radius: 25px;
-  margin: 10px;
+  
 }
 
 /* Change the color of links on hover */
@@ -63,7 +63,7 @@ Navbar CSS
   padding: 1px;
   text-align: center;
   top: 150%;
-  margin-left: 150px;
+  margin-left: 239px;
 }
 
 
@@ -126,7 +126,7 @@ a:hover {
   overflow: hidden;
   padding: 50px;
   color: black;
-  border-radius: 20px;
+  border-radius: 3px;
   -webkit-box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
@@ -176,7 +176,7 @@ a:hover {
 
 .social-login ul li a {
   background-color: #0044aa;
-  border-radius: 10px;
+  border-radius: 3px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -271,7 +271,7 @@ li.google a::before {
   font-size: 16px;
   background: rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  border-radius: 3px;
   margin-bottom: 15px;
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
@@ -348,7 +348,7 @@ li.google a::before {
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 18px;
   font-size: 20px;
-  border-radius: 10px;
+  border-radius: 3px;
   cursor: pointer;
   margin-top: 20px;
   color: white;
