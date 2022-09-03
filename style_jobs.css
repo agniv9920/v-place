@@ -80,6 +80,11 @@ body {
 /*   font-family: 'Noto Sans JP', sans-serif;
   background-color: #fef8f8; */
 }
+.center{
+  font-family: 'Gemsbuck Font', sans serif;
+  
+  margin-left: 110px;
+}
 
 .cards {
   display: grid;
