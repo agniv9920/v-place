@@ -15,7 +15,7 @@
 <body>
   <header>
     <div class="topnav">
-      <a href="index.html">Home</a>
+      <a href="home.html">Home</a>
       <a href="jobs.html">Jobs</a>
       <a href="intern.html">Internships</a>
       <a class="active" href="about.html">About</a>
@@ -26,13 +26,16 @@
         <img src="images/VPlace1.png">
 
         <div class="right">
-          <button onclick="lout()" class="btn">Log out</button>
+          <button onclick="lout()" class="btn" style="width: 20%; margin-left: 50px;">Log out</button>
+          <!--<button onclick="dash()" class="btn">My Profile</button>-->
+          <a href="dashboard.html"><img src="images/avatar.png" class="rounded-circle shadow-4"
+  style="width: 80px; height: 50px; padding-left: 20px;" alt="Avatar" /></a>
         </div>
       </div>
     </div>
 
   </header>
-<script>
+  <script>
     function lout() {
       window.location.assign("index.html");
       alert("Logged Out Successfully");
@@ -86,7 +89,7 @@
       <div class="map">
         <ul class="site_map">
           <h4>SITE MAP</h4>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="home.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="contact.html">Contact Us</a></li>
           <li><a href="jobs.html">Jobs</a></li>

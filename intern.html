@@ -8,7 +8,7 @@
   <link href="style_jobs.css" rel="stylesheet" type="text/css" />
   <link href="style1.css" rel="stylesheet" type="text/css" />
   <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -16,7 +16,7 @@
 <body>
   <header>
     <div class="topnav">
-      <a href="index.html">Home</a>
+      <a href="home.html">Home</a>
       <a href="jobs.html">Jobs</a>
       <a class="active" href="intern.html">Internships</a>
       <a href="about.html">About</a>
@@ -27,13 +27,16 @@
         <img src="images/VPlace1.png">
 
         <div class="right">
-          <button onclick="lout()" class="btn">Log out</button>
+          <button onclick="lout()" class="btn" style="width: 20%; margin-left: 50px;">Log out</button>
+          <!--<button onclick="dash()" class="btn">My Profile</button>-->
+          <a href="dashboard.html"><img src="images/avatar.png" class="rounded-circle shadow-4"
+  style="width: 80px; height: 50px; padding-left: 20px;" alt="Avatar" /></a>
         </div>
       </div>
     </div>
 
   </header>
-<script>
+  <script>
     function lout() {
       window.location.assign("index.html");
       alert("Logged Out Successfully");
@@ -42,8 +45,8 @@
 
   <h1 class="center">INTERNSHIPS</h1>
 
-  <ul class="cards">
-    <li>
+  <ul class="cards"  id="container">
+<!--     <li>
       <a href="" class="card">
         <img src="images/amazonpic.jpg" style="height: 200px; width: 300px;" />
         <div class="card__overlay">
@@ -119,14 +122,14 @@
           </p>
         </div>
       </a>
-    </li>
+    </li> -->
   </ul>
   <footer>
     <div class="container">
       <div class="map">
         <ul class="site_map">
           <h4>SITE MAP</h4>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="home.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="contact.html">Contact Us</a></li>
           <li><a href="jobs.html">Jobs</a></li>
@@ -169,6 +172,118 @@
       <p>Place where you find all the Jobs and Interships provided by companies in your University </p>
     </div>
   </footer>
+
+
+  <script>
+
+  const container = document.querySelector('#container');
+
+  for(let i=1;i<15;i++){
+
+    var settings = {
+      "url": `https://13.233.145.108/get-intern/${i}`,
+      "method": "GET",
+        "rejectUnauthorized": false,
+          "requestCert": true,
+          "agent": false
+    };
+
+    // <li>
+    //   <a href="" class="card">
+    //     <img src="images/applepic.png" style="height: 80%;" class="card__image" alt="" />
+    //     <div class="card__overlay">
+    //       <div class="card__header">
+    //         <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+    //           <path />
+    //         </svg>
+    //         <img class="card__thumb" src="images/place1.png" alt="" />
+    //         <div class="card__header-text">
+    //           <h3 class="card__title">Community Manager</h3>
+    //           <span class="card__status">3 hours ago</span>
+    //         </div>
+    //       </div>
+    //       <p class="card__description">Avg Salary: Rs 20 LPA
+    //       </p>
+    //     </div>
+    //   </a>
+    // </li> 
+    
+    $.ajax(settings).done(function (response) {
+
+
+      const list=document.createElement('li');
+      const anchr = document.createElement('a');
+      anchr.classList.add('card')
+      const img = document.createElement('img');
+      img.classList.add('company_logo');
+      img.src="images/micro1.jpg";
+      const card__overlay = document.createElement('div');
+      card__overlay.classList.add('card__overlay');
+      const card__header_div =document.createElement('div');
+      card__header_div.classList.add('card__header');
+      const card__arc = document.createElement('svg');
+      card__arc.classList.add('card__arc');
+      card__arc.setAttribute('xmlns',"http://www.w3.org/2000/svg");
+
+      
+      const card__thumb = document.createElement('img');
+      card__thumb.classList.add('card__thumb');
+      card__thumb.src = "images/place1.png";
+      const card__header_text = document.createElement('div');
+      card__header_text.classList.add('card__header-text');
+      const card__title = document.createElement('h3');
+      card__title.classList.add('card__title');
+      card__title.setAttribute('id',`h3-${i}`);
+      
+      const card__status = document.createElement('span');
+      card__status.classList.add('card__status');
+      card__status.setAttribute('id',`span${i}`);
+
+      const btn = document.createElement('button');
+      btn.classList.add('btnapply');
+      btn.innerHTML="Apply";
+       btn.setAttribute('onclick',"location.href='apply.html'");
+      
+      const card__description = document.createElement('p');
+      card__description.classList.add('card__description');
+      card__description.setAttribute('id',`p${i}`);
+      
+
+      container.append(list);
+      list.append(anchr);
+      anchr.append(img);
+      anchr.append(card__overlay);
+      card__overlay.append(card__header_div);
+      card__header_div.append(card__arc);
+      card__header_div.append(card__thumb);
+      card__header_div.append(card__header_text);
+      card__header_text.append(card__title);
+      card__header_text.append(card__status);
+      card__header_text.append(btn);
+      card__overlay.append(card__description);
+
+      var title = document.getElementById(`h3-${i}`);
+      title.innerHTML = response[0]['company'];
+
+      var status = document.getElementById(`span${i}`);
+      status.innerHTML = response[0]['duration'];
+
+      var description = document.getElementById(`p${i}`);
+      description.innerHTML = response[0]['stipend'];
+
+      
+
+      
+
+    });
+
+
+  }
+              
+
+      </script>
+  
+  
 </body>
 
 </html>

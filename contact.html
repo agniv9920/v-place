@@ -9,19 +9,19 @@
   <link rel="stylesheet" href="../style_contact.css">
   <link href="style1.css" rel="stylesheet" type="text/css" />
   <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
   <header>
     <script>
-    function lout() {
-      window.location.assign("index.html");
-      alert("Logged Out Successfully");
-    }
-  </script>
+      function lout() {
+        window.location.assign("index.html");
+        alert("Logged Out Successfully");
+      }
+    </script>
     <div class="topnav">
-      <a href="index.html">Home</a>
+      <a href="home.html">Home</a>
       <a href="jobs.html">Jobs</a>
       <a href="intern.html">Internships</a>
       <a href="about.html">About</a>
@@ -32,7 +32,10 @@
         <img src="images/VPlace1.png">
 
         <div class="right">
-          <button onclick="lout()" class="btn">Log out</button>
+          <button onclick="lout()" class="btn" style="width: 20%; margin-left: 50px;">Log out</button>
+          <!--<button onclick="dash()" class="btn">My Profile</button>-->
+          <a href="dashboard.html"><img src="images/avatar.png" class="rounded-circle shadow-4"
+  style="width: 80px; height: 50px; padding-left: 20px;" alt="Avatar" /></a>
         </div>
       </div>
     </div>
@@ -42,23 +45,23 @@
     <form class="form">
       <div class="pageTitle title">Contact Us </div>
       <div class="secondaryTitle title" style="font-family: Poppins, serif;">Please fill this form to contact us.</div>
-      <input type="text" style="font-family: Poppins, serif;" class="name formEntry" placeholder="Name" />
-      <input type="text" style="font-family: Poppins, serif;" class="email formEntry" placeholder="Email" />
-      <textarea class="message formEntry" style="font-family: Poppins, serif;" placeholder="Message"></textarea>
+      <input type="text" style="font-family: Poppins, serif;" class="name formEntry" placeholder="Name" id="name" />
+      <input type="text" style="font-family: Poppins, serif;" class="email formEntry" placeholder="Phone number" id="phno" />
+      <textarea class="message formEntry" style="font-family: Poppins, serif;" placeholder="Message" id="msg"></textarea>
       <input type="checkbox" class="termsConditions" style="font-family: Poppins, serif;" value="Term">
       <label style="color: grey" for="terms" style="font-family: Poppins, serif;"> I Accept the <span
           style="color: #0e3721">Terms of Use</span> & <span style="color: #0e3721"
           style="font-family: Poppins, serif;">Privacy Policy</span>.</label><br>
-      <button class="submit formEntry" onclick="thanks()" style="font-family: Poppins, serif;">Submit</button>
+      <button class="submit formEntry" onclick="message()" style="font-family: Poppins, serif;">Submit</button>
     </form>
   </div>
-  <script src="app.js"></script>
+<!--   <script src="app.js"></script> -->
   <footer>
     <div class="container" style="margin-top: 50%;">
       <div class="map">
         <ul class="site_map">
           <h4>SITE MAP</h4>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="home.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="contact.html">Contact Us</a></li>
           <li><a href="jobs.html">Jobs</a></li>
@@ -101,6 +104,37 @@
       <p>Place where you find all the Jobs and Interships provided by companies in your University </p>
     </div>
   </footer>
+
+
+  <script>
+    function message(){
+      var name = document.getElementById("name").value;
+    var phone = document.getElementById("phno").value;
+      var msg = document.getElementById("msg").value;
+        var settings = {
+  "url": "https://13.233.145.108/contact-us",
+  "method": "POST",
+  "timeout": 0,
+  "headers": {
+    "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjIxOTMyNzgsImlhdCI6MTY2MjE4OTY3OCwic3ViIjoiYWRtaW4ifQ.bkQhFUVecKD7Ld4PxmDYrD-tOPcz66nPoP4JpLrqnvw",
+    "Content-Type": "application/json"
+  },
+  "data": JSON.stringify({
+    "username": "random",
+    "name": name,
+    "mobileNo": phone,
+    "message": msg,
+  }),
+};
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+    }
+        
+    </script>
+
+  
 </body>
 
 </html>
